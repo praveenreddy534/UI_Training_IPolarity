@@ -1,0 +1,6 @@
+ 1) Use External Style sheet  for all CSS Code
+ 2) Use one html 
+ 3) Use Tables, Divs, Un ordered list and apply styles on them from your external style sheets (make sure you use classes)
+ 4) Use Absolute and relative positioning in CSS (Any Example you want )
+ 5) To make up an example to use CSS Box model 
+ 
