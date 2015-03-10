@@ -1,0 +1,12 @@
+Date String : '2015-03-10T12:13:01.891Z'
+
+toLocaleTimeString() // 7:13 AM Chrome
+ // 12:13 PM // FireFox
+ // 12:13 PM // IE
+
+
+I want consistent time string throught out all the browsers
+ You do all your Math over Date Objects, dont use any third party libraries 
+
+ 
+
