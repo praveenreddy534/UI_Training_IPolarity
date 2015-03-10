@@ -1,4 +1,4 @@
-Date String : '2015-03-10T12:13:01.891Z'
+Date String : '2015-03-10T12:13:01.891'
 
 toLocaleTimeString() // 7:13 AM Chrome
  // 12:13 PM // FireFox
