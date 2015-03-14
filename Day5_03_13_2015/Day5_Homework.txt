@@ -1,0 +1,17 @@
+Binary Tree - is a data structure to store in data a tree format
+
+      1
+   2      3
+4    5   6  7
+              8
+
+- read on binary tree
+- Write a Binary Tree in Javascript 
+
+- Binary tree should be constructor function take  in root node to construct 
+ the tree 
+-- you can give other methods to add nodes to the tree 
+-- all the three traversal techniquest 
+     -inorder, preorder, post order
+
+-- printInOrder() // you should print all the elements in the binary tree in In-Order 
