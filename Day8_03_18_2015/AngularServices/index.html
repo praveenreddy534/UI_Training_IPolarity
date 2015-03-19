@@ -1,0 +1,40 @@
+<html  ng-app='myApp'>
+<head></head>
+<body>
+	<div>
+		<!--<div  ng-controller="FirstCtrl">
+			<table border="2">
+				<tr>
+					<th align="left">Name</th>
+					<th align="left">City</th>
+					<th align="left">Country</th>
+				</tr>
+				<tr ng-repeat="customer in customers">
+					<td>{{customer.Name}}</td>
+					<td>{{customer.City}}</td>
+					<td>{{customer.Country}}</td>
+				</tr>
+			</table>
+		</div> --><br/>
+		<div ng-controller="GreetingsCtrl">
+			<table border="2">
+				<tr>
+					<th align="left">Name</th>
+					<th align="left">City</th>
+					<th align="left">Country</th>
+				</tr>
+				<tr ng-repeat="customer in customers">
+					<td>{{customer.Name}}</td>
+					<td>{{customer.City}}</td>
+					<td>{{customer.Country}}</td>
+				</tr>
+			</table>
+		</div>
+		
+		
+	</div>
+<!-- Include Scripts from here -->
+<script src="angular.min.js"></script>
+<script src="app.js"></script> 
+</body>
+</html>

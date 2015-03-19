@@ -1,0 +1,18 @@
+<html  ng-app='myApp'>
+<head></head>
+<body>
+	<div ng-controller="FirstCtrl">
+		<h3 style="color:blue">List of Movies </h3>	<hr>
+		<ul>
+			<li ng-repeat="movie in movies">{{movie.Name}}</li>
+		</ul>
+		<br/>
+		<div style="color:red;font-weight:bold">{{errorMsg}} </div><br/>
+		Please Enter your fav movie :   <input type="Text" ng-model="enteredMovie"/>
+		<input type="button" name="Add to List" value="Add to List" ng-click="addToList(enteredMovie)"/>
+	</div>
+<!-- Include Scripts from here -->
+<script src="angular.min.js"></script>
+<script src="app.js"></script> 
+</body>
+</html>

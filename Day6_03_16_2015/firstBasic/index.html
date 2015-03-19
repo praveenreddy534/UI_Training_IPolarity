@@ -1,11 +1,20 @@
 <html  ng-app='myApp'>
 <head></head>
 <body>
-	<div class="main">
-		This is my first Angular App
-		<div ng-controller="FirstCtrl">
-			{{greeting}}
+	<div>
+		<div  ng-controller="FirstCtrl">
+			 Fruits List 
+			 <hr>
+			 <ul>
+			 <li ng-repeat="eachFruit in fruits">{{eachFruit}}</li>
+			 <ul>
+		</div> <br/>
+		<div ng-controller="GreetingsCtrl">
+			<input type="text" ng-model="greetingModel"></input>
+			See what i entered in the input box here :::   {{greetingModel}}
 		</div>
+		
+		
 	</div>
 <!-- Include Scripts from here -->
 <script src="angular.min.js"></script>
