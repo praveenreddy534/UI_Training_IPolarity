@@ -1,21 +1,17 @@
 <html  ng-app='myApp'>
 <head></head>
 <body>
-	<div ng-controller="FirstCtrl">		
-		<info> </info>
+	<div ng-controller="Parent1Ctrl">			
+		<hr>
+		<div ng-controller="Parent1ACtrl">
+		   <div ng-controller="Parent1AACtrl">
+		   </div>
+		</div>
+		<div ng-controller="Parent1BCtrl">
+            <redbtn text="i am red btn" on-btn-click="sayHello(text)"></redbtn>
+		</div>
+
 		
-		<hr>
-		This is a test 
-		
-		##
-		##
-		##
-		I want to see this now
-		See the dynamics now 
-		##
-		###
-		<hr>
-		<hr>
 	</div>
 <!-- Include Scripts from here -->
 <script src="angular.min.js"></script>
