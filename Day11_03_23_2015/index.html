@@ -3,12 +3,17 @@
 <body>
 	<div ng-controller="Parent1Ctrl">			
 		<hr>
-		{{hello}}
+		{{hello}} <br/>
 		Value of Pie : {{pi}}
 		<br/>Sum of 2 + 3 : {{sumOf2n3}}
+		<br/> Division of 10 / 2 : {{div10by2}}
+		<br/> Answer : {{ans}}
+		<input type="button" value="Insert into browser" 
+		   ng-click="insertIntoBrw()"/>
 	</div>
 <!-- Include Scripts from here -->
 <script src="angular.min.js"></script> 
+<script src="node_modules/angular-local-storage/dist/angular-local-storage.min.js"></script>
 <script src="greetingsModule.js"></script> 
 <script src="app1.js"></script>
 </body>

@@ -25,14 +25,19 @@ math.service('mathUtil', function(){
 		for( i = 0; i < argLen; i++){
 			sum += arguments[i];
 		}
+		console.log("Addition : ", sum);
 		return sum;
+
 	}
 	//Substraction
 	this.substract = function(){
-		var i, argLen = arguments.length,sum=0;
-		for( i = 0; i < argLen; i++){
-			sum -= arguments[i];
+		//5 , 5 0 - 5 - 5 = -10
+		var i, argLen = arguments.length,sum=arguments[0];
+		for( i = 0; i < argLen - 1; i++){
+			sum  = sum - arguments[i+1];
+			console.log("Sum :", sum);
 		}
+		console.log('substract 1: ', sum);
 		return sum;
 	}
 	//Multiplication
@@ -47,6 +52,7 @@ math.service('mathUtil', function(){
 	this.divide = function(a, b){
 		if(b == 0) return "Divide by Zero Exception";
 		try{
+			console.log('divide: ', a/b);
 			return a/b;
 		}
 		catch(err){
