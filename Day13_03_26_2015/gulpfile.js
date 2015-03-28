@@ -1,10 +1,15 @@
 
 var gulp = require('gulp');
 var open = require('gulp-open');
-var karma = require('karma').server;
+var karma = require('gulp-karma');
 
 var browserSync = require('browser-sync');
-
+var allFiles = [
+ 'angular.min.js',
+ 'angular-mocks.js',
+ 'js/*.js',
+ 'test/*.js'
+];
 gulp.task('startApp', function(){
 	var config = {
 		ui: {
@@ -20,11 +25,15 @@ gulp.task('startApp', function(){
 	}
 	browserSync(config);
 });
-gulp.task('karma', function(){
-	karma.start({
-		configFile: 'karma.conf.js',
-		singleRun: true
-	},done);
+gulp.task('test', function(coverage){
+	gulp.test(allFiles)
+		.pipe(karma({
+			configFile: 'karma.conf.js',
+			action: 'run'			
+		}))
+		.on('error',function(e){
+			console.log('karma error :', e);
+		});
 });
 gulp.task('default',['startApp'],function(){
 	

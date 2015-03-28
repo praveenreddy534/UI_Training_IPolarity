@@ -24,7 +24,7 @@ gulp.task('karma', function(){
 	karma.start({
 		configFile: 'karma.conf.js',
 		singleRun: true
-	},done);
+	});
 });
 gulp.task('default',['startApp'],function(){
 	

@@ -1,0 +1,35 @@
+<html  ng-app='myApp'>
+<head></head>
+<body>
+	<div ng-controller="Parent1Ctrl">			
+		<hr>
+		<table border="2">
+				<tr>
+					<th align="left">Name</th>
+					<th align="left">City</th>
+					<th align="left">Country</th>
+					<th align="left">Rupees</th>
+					<th align="left">Dates</th>
+				</tr>
+				<tr>
+					<td><input type="text" ng-model="filterObj.Name"</td>
+					<td><input type="text" ng-model="filterObj.City"</td>
+					<td><input type="text" ng-model="filterObj.Country"</td>
+				<tr>
+				<tr ng-repeat="customer in customers | filter: filterObj">
+					<td>{{customer.Name }}</td>
+					<td>{{customer.City}}</td>
+					<td>{{customer.Country | uppercase }}</td>
+					<td>{{$index | addSymbol:'Junk data'}}</td>
+					<td>{{dateObj | date: 'MM/dd/yy' }}</td>
+				</tr>
+			</table>
+	</div>
+<!-- Include Scripts from here -->
+<script src="angular.min.js"></script> 
+<script src="node_modules/angular-local-storage/dist/angular-local-storage.min.js"></script>
+<script src="js/app1.js"></script>
+<script src="js/greetingsModule.js"></script> 
+<script src="js/filters.js"></script> 
+</body>
+</html>

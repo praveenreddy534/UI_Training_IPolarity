@@ -1,0 +1,21 @@
+<html  ng-app='myApp'>
+<head></head>
+<body>
+	<div ng-controller="Parent1Ctrl">			
+		<hr>
+		<form name="userDtlForm" role="form"
+		      ng-submit="submitForm(userDtlForm.$valid)" novalidate>
+		   Please enter your phone number :  <input type="text" ng-model="phoneNum" name="phoneNum" ng-required="true"/>
+		   <small ng-if="userDtlForm.submitted && userDtlForm.phoneNum.$error.required">Phone Number is a required field</small>
+		   <small ng-if="userDtlForm.phoneNum.$error.number">Entered value is not a number.</small>
+		   <small ng-if="userDtlForm.phoneNum.$error.zeroCheck">You cannot have 0 at the start of the number</small>
+		   <input type="submit" value="submit" ng-click="userDtlForm.submitted = true"/>
+		</form>
+	</div>
+<!-- Include Scripts from here -->
+<script src="angular.min.js"></script> 
+<script src="node_modules/angular-local-storage/dist/angular-local-storage.min.js"></script>
+<script src="js/greetingsModule.js"></script> 
+<script src="js/app1.js"></script>
+</body>
+</html>
