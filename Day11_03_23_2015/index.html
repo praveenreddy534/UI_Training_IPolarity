@@ -10,6 +10,16 @@
 		<br/> Answer : {{ans}}
 		<input type="button" value="Insert into browser" 
 		   ng-click="insertIntoBrw()"/>
+		   <br />
+		   <hr>
+			<input type="button" id="btnShow" value="Show Text"  ng-click="showit = true"/>
+			<input type="button" id="btnHide" value="Hide Text"  ng-click="showit = false"/>
+
+			<br />
+			<br />
+		  <div class="data" ng-show="showit">
+		    This has to shown differently
+		  </div>
 	</div>
 <!-- Include Scripts from here -->
 <script src="angular.min.js"></script> 
